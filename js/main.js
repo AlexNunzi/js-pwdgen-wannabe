@@ -15,7 +15,7 @@ document.getElementById("pass").innerHTML = `${userName}${userSurname}${choosenC
 
 
 function copyOnClick(){
-var content = document.createRange();
+let content = document.createRange();
 content.selectNode(document.getElementById("pass"));
 window.getSelection().removeAllRanges();
 window.getSelection().addRange(content);
