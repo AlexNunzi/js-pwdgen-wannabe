@@ -12,3 +12,13 @@ const currentYear = "23";
 
 // Risoluzione dell'esercizio tramite template literals
 document.getElementById("pass").innerHTML = `${userName}${userSurname}${choosenColor}${currentYear}`;
+
+
+function copyOnClick(){
+var content = document.createRange();
+content.selectNode(document.getElementById("pass"));
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(content);
+document.execCommand('copy');
+window.getSelection().removeAllRanges();
+}
